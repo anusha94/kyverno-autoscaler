@@ -1,0 +1,12 @@
+apiVersion: autoscaler.security.nirmata.io/v1alpha1
+kind: KyvernoAutoscaler
+metadata:
+  labels:
+    app.kubernetes.io/name: kyvernoautoscaler
+    app.kubernetes.io/instance: kyvernoautoscaler-sample
+    app.kubernetes.io/part-of: kyverno-autoscaler
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kyverno-autoscaler
+  name: kyvernoautoscaler-sample
+spec:
+  # TODO(user): Add fields here

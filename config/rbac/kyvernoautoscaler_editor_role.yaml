@@ -1,0 +1,31 @@
+# permissions for end users to edit kyvernoautoscalers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: kyvernoautoscaler-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kyverno-autoscaler
+    app.kubernetes.io/part-of: kyverno-autoscaler
+    app.kubernetes.io/managed-by: kustomize
+  name: kyvernoautoscaler-editor-role
+rules:
+- apiGroups:
+  - autoscaler.security.nirmata.io
+  resources:
+  - kyvernoautoscalers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - autoscaler.security.nirmata.io
+  resources:
+  - kyvernoautoscalers/status
+  verbs:
+  - get
