@@ -29,7 +29,8 @@ type KyvernoAutoscalerSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of KyvernoAutoscaler. Edit kyvernoautoscaler_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// Foo string `json:"foo,omitempty"`
+	Arps int64 `json:"arps,omitempty"`
 }
 
 // KyvernoAutoscalerStatus defines the observed state of KyvernoAutoscaler

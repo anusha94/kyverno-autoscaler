@@ -35,10 +35,11 @@ spec:
           spec:
             description: KyvernoAutoscalerSpec defines the desired state of KyvernoAutoscaler
             properties:
-              foo:
+              arps:
                 description: Foo is an example field of KyvernoAutoscaler. Edit kyvernoautoscaler_types.go
-                  to remove/update
-                type: string
+                  to remove/update Foo string `json:"foo,omitempty"`
+                format: int64
+                type: integer
             type: object
           status:
             description: KyvernoAutoscalerStatus defines the observed state of KyvernoAutoscaler
